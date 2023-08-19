@@ -14,6 +14,10 @@ body::-webkit-scrollbar{
     margin: 50px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
 }
+.container a{
+    text-decoration: none;
+    color: wheat;
+}
 .project-name{
     margin: 0 20px;
     font-size: 25px;
@@ -22,7 +26,7 @@ body::-webkit-scrollbar{
 .title-saved-solutions{
     font-size: 25px;
     background-color: #000;
-    color: rgb(255, 255, 255);
+    color:wheat;
     padding: 25px;
     border-radius: 23px;
 }
