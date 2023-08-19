@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background-color:rgb(220, 214, 220);
+    background-color: rgb(220, 214, 220);
 }
 body::-webkit-scrollbar{
     display: none;
@@ -22,13 +22,9 @@ body::-webkit-scrollbar{
 .title-saved-solutions{
     font-size: 25px;
     background-color: #000;
+    color: rgb(255, 255, 255);
     padding: 25px;
     border-radius: 23px;
-    cursor: pointer;
-}
-a{
-    text-decoration: none;
-    color: wheat;
 }
 .main-Problem{
     margin: 50px;
@@ -50,7 +46,7 @@ a{
     text-align: center;
     font-size: 23px;
     font-weight: bolder;
-    background-color: rgb(255, 255, 255);
+    background-color: gainsboro;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     border: none;
     color: #000;
@@ -93,7 +89,7 @@ a{
     cursor: pointer;
 }
 #result{
-    background-color:rgb(220, 214, 220);
+    background-color: rgb(220, 214, 220);
     height: 160px;
     display: flex;
     flex-direction: column;
@@ -102,7 +98,7 @@ a{
     position: relative;
     margin: 10px 0 0 50px;
     padding: 20px;
-    background-color: rgb(249, 246, 246);
+    background-color: rgb(250, 250, 250);
     border-radius: 20px;
     height: 160px;
     width: 90%;
@@ -129,7 +125,3 @@ a{
 .trase:hover{
     color: red;
 }
-
-
-
-

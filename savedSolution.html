@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-RWd44LthedJMu7h9h5xlN1m8sMhsH7EnEg&usqp=CAU" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
-    <script src="App.js" defer></script>
-    <title>Math Partner</title>
+        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-RWd44LthedJMu7h9h5xlN1m8sMhsH7EnEg&usqp=CAU" type="image/x-icon">
+
+    <link rel="stylesheet" href="saved.css">
+    <script src="solutions.js" defer></script>
+    <title>History</title>
 </head>
 
 <body>
@@ -20,9 +21,9 @@
                 <div class="project-name">
                     <h1>Math Partner</h1>
                 </div>
-                <a href="savedSolution.html">
+                <a href="index.html">
                     <div class="title-saved-solutions">
-                        <h4>SAVED SOLUTIONS</h4>
+                        <h4>GO TO HOME</h4>
                     </div>
                 </a>
             </div>
@@ -33,11 +34,11 @@
         <main class="problem-With-Select">
             <div class="heading">
                 <h1 class="hd-1">Problem</h1>
-                <input type="text" placeholder="TYPE HERE........." id="inputVal">
+                <input type="text" disabled placeholder="TYPE HERE........." id="inputVal">
             </div>
             <div class="select-Category">
                 <h1 class="hd-1">select Category</h1>
-                <select name="mathsProblem" id="mathsCategory">
+                <select name="mathsProblem" id="mathsCategory" disabled>
                     <option value="simplify">Simplify</option>
                     <option value="factor">Factor</option>
                     <option value="derive">Derive</option>
@@ -56,7 +57,7 @@
                 </select>
             </div>
             <div class="searchBtn btn">
-                <button>
+                <button disabled>
                     <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
@@ -64,11 +65,11 @@
     </section>
 
     <section id="result">
-        <div id="show_div">
-            <h2></h2>
-            <p></p>
-            <i onclick="deleteData()"></i>
-        </div>
+        <!-- <div class="completeResult">
+            <h2 class="selected-operation">Integrate :</h2>
+            <p class="find-result">1/2 x^4</p>
+            <i class="fa-regular fa-trash-can trase"></i>
+        </div> -->
     </section>
 </body>
 
