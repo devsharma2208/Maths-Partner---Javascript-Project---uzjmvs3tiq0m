@@ -4,6 +4,8 @@ const input = document.querySelector("#inputVal");
 let result = document.querySelector("#result");
 const mathscatagery = document.querySelector("#mathsCategory");
 
+/** create an history_Array for store a data in local Storage  */
+
 let history_arr = [];
 localStorage.setItem('data', history_arr);
 
