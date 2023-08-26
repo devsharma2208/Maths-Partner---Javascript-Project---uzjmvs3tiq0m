@@ -7,12 +7,10 @@ const mathscatagery = document.querySelector("#mathsCategory");
 /** create an history_Array for store a data in local Storage  */
 
 let history_arr = [];
-localStorage.setItem('data', history_arr);
 
 async function getData(mathscatageryValue, encodedExpression) {
     const response = await fetch(`https://newton.now.sh/api/v2/${mathscatageryValue}/${encodedExpression}`)
     const json = await response.json();
-
     create_element(json);
 
 }
@@ -52,7 +50,7 @@ function create_element(json) {
     history_arr.push(json);
 
     localStorage.setItem('data', JSON.stringify(history_arr));
-    
+
     input.value = "";
 }
 
@@ -79,6 +77,8 @@ function deleteData(event) {
         localStorage.clear();
         localStorage.setItem("data", JSON.stringify(history_arr));
     }
+}
+if (localStorage.length != 0) {
     history_arr = JSON.parse(localStorage.getItem('data'));
 }
 
