@@ -1,15 +1,18 @@
+
 const searchBtn = document.querySelector(".searchBtn");
 const input = document.querySelector("#inputVal");
 let result = document.querySelector("#result");
 const mathscatagery = document.querySelector("#mathsCategory");
 
 let history_arr = [];
+localStorage.setItem('data', history_arr);
 
 async function getData(mathscatageryValue, encodedExpression) {
     const response = await fetch(`https://newton.now.sh/api/v2/${mathscatageryValue}/${encodedExpression}`)
     const json = await response.json();
 
     create_element(json);
+
 }
 
 searchBtn.addEventListener('click', () => {
@@ -26,6 +29,8 @@ searchBtn.addEventListener('click', () => {
         alert("Enter some value....")
     }
 })
+
+/** Create element for show result */
 
 function create_element(json) {
     let div = document.querySelector("#show_div")
@@ -45,9 +50,11 @@ function create_element(json) {
     history_arr.push(json);
 
     localStorage.setItem('data', JSON.stringify(history_arr));
-
+    
     input.value = "";
 }
+
+/**  Delete data form LocalStorage   */
 function deleteData(event) {
     let div = document.querySelector("#show_div")
     div.classList.remove("completeResult");
@@ -62,14 +69,14 @@ function deleteData(event) {
 
     history_arr = JSON.parse(localStorage.getItem('data'));
 
-    if (Array.isArray(history_arr)){
+    if (history_arr.length === 0) {
+        localStorage.clear();
+    }
+    else if (Array.isArray(history_arr)) {
         history_arr.pop();
         localStorage.clear();
         localStorage.setItem("data", JSON.stringify(history_arr));
     }
-    // else if(history_arr.length === 0){
-    //     localStorage.clear();
-    // }
+    history_arr = JSON.parse(localStorage.getItem('data'));
 }
 
-history_arr = JSON.parse(localStorage.getItem('data'));

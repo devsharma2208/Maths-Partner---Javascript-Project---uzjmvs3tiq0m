@@ -40,8 +40,8 @@ function deleteData(i) {
         localStorage.clear();
         localStorage.setItem("data", JSON.stringify(history_arr));
     }
-    // else if(history_arr.length === 0){
-    //     localStorage.clear();
-    // }
+    else if(history_arr.length === 0){
+        localStorage.clear();
+    }
 }
 history_arr = JSON.parse(localStorage.getItem('data'));
