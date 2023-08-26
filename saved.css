@@ -129,26 +129,25 @@ body::-webkit-scrollbar{
 .trase:hover{
     color: red;
 }
-@media (max-width: 425px) {
+@media (max-width: 500px) {
+    header{
+        width: 400px;
+    }
     .container{
-        display: flex;
-        flex-direction: row;
         justify-content: space-between;
     }
 
     .project-name{
         width: 20px;
         margin: 0 5px;
-        font-size: 15px;
+        font-size: 10px;
         font-weight: bolder;
     }
     .title-saved-solutions{
-        font-size: 15px;
+        font-size: 10px;
         background-color: #000;
         padding: 10px;
-    }
-    .main-Problem{
-        width: 100%;
+        border-radius: 10px;
     }
     .problem-With-Select{
         font-size: 10px;
@@ -157,18 +156,25 @@ body::-webkit-scrollbar{
     .heading input{
         margin: 5px 5px 0 0;
         height: 40px;
-        width: 150px;
+        width: 110px;
         font-size: 12px;
+        border-radius: 10px;
+    }
+    .hd-1{
+        width: 100px;
+        margin: 20px 0 0 5px;
+        font-size: 10px;
     }
     #mathsCategory{
         margin: 5px 0 0 5px;
         height: 40px;
-        width: 120px;
+        width: 100px;
         font-size: 13px;
+        border-radius: 10px;
     }
     .btn{
         height: 20px;
-        width: 50px;
+        width: 30px;
     }
     .searchBtn button{
         height: 40px;
@@ -179,6 +185,6 @@ body::-webkit-scrollbar{
     }
     #result{
         height: 160px;
-        width: 350px;
+        width: 325px;
     }
 }
